@@ -1,0 +1,3 @@
+[submodule "migration_repo"]
+	path = migration_repo
+	url = https://github.com/anonimneyshiy/migration_repo.git
