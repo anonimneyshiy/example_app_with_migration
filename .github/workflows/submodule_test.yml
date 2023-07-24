@@ -1,0 +1,21 @@
+name: test submodule
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      
+    steps:
+    - uses: actions/checkout@v3
+    - name: submodule test
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        sh test_path_submodule.sh
