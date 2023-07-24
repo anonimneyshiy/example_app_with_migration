@@ -1,5 +1,8 @@
 #!/bin/sh
 
+git submodule init
+git submodule update
+
 python3 -c "\
 import os 
 
